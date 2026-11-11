@@ -1,18 +1,7 @@
-# Bad-fix predictions — unfilled
+# Bad-fix predictions — retrospective status
 
-Write and commit a prediction before running each experiment. Do not overwrite
-an incorrect prediction after observing the result. Fill the actual column only
-from the saved checker output, including exit code and evidence path.
+**Not completed as preregistered predictions.** The repairs and tests had already been executed with substantial AI assistance before this document was filled. It would be misleading to invent prediction dates or present retrospective reasoning as if it had been recorded before the experiments.
 
-Use PASS/FAIL for the security and functionality gates. Record operational errors
-as ERROR, not as a successful denial or a broken-feature result. Predict both
-gates even if your patch targets only one. No test cases have been supplied here.
+The alternatives considered and rejected, together with the relevant contract-test names and observed baseline/fixed results, are recorded in each `work/<challenge>/finding.md`. Those entries are retrospective engineering analysis, not a preregistered participant experiment.
 
-| Patch idea | Predicted security result | Predicted functionality result | Actual result and report path |
-| --- | --- | --- | --- |
-
-## Notes for each experiment
-
-Use one short entry per case: prediction commit; implementation/test commit;
-reasoning; command; observed discrepancy (if any); revised understanding; assistance.
-Keep the original row when your prediction was wrong.
+For a future independent exercise, write each prediction before running its experiment, commit the prediction, then preserve the unchanged prediction and append the actual result in a later commit.

@@ -1,0 +1,29 @@
+diff --git a/challenges/01-authorization/app.py b/challenges/01-authorization/app.py
+index 958bbff..d8c2e9a 100644
+--- a/challenges/01-authorization/app.py
++++ b/challenges/01-authorization/app.py
+@@ -39 +39 @@ class InvoiceHandler(Handler):
+-        if direct and not can_access(actor, invoice, operation):
++        if not can_access(actor, invoice, operation):
+diff --git a/challenges/01-authorization/policy.py b/challenges/01-authorization/policy.py
+index d646332..280f6b6 100644
+--- a/challenges/01-authorization/policy.py
++++ b/challenges/01-authorization/policy.py
+@@ -1 +1 @@
+-"""Participant edit surface. Also inspect all call sites in app.py."""
++"""Reference: enforce server-owned role/scope and an atomic field allowlist."""
+@@ -5 +5,7 @@ def can_access(actor, invoice, operation="read"):
+-    return actor is not None
++    if actor is None or operation not in ("read", "write"):
++        return False
++    if actor["role"] == "admin":
++        return True
++    if actor["role"] == "manager":
++        return operation == "read" and actor["team"] == invoice["team"]
++    return actor["role"] == "user" and actor["id"] == invoice["owner"]
+@@ -9 +15 @@ def apply_patch(invoice, body):
+-    if "note" in body and (not isinstance(body["note"], str) or len(body["note"]) > 200):
++    if set(body) != {"note"} or not isinstance(body["note"], str) or len(body["note"]) > 200:
+@@ -11 +17 @@ def apply_patch(invoice, body):
+-    invoice.update(body)
++    invoice["note"] = body["note"]

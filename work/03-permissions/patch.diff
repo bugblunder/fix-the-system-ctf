@@ -1,0 +1,7 @@
+diff --git a/challenges/03-permissions/policy.json b/challenges/03-permissions/policy.json
+index 9abffbf..5b55864 100644
+--- a/challenges/03-permissions/policy.json
++++ b/challenges/03-permissions/policy.json
+@@ -1 +1 @@
+-{"directory_mode":"0755","file_mode":"0666","exchange_mode":"0777","umask":"0000"}
++{"directory_mode":"0700","file_mode":"0600","exchange_mode":"0755","umask":"0077"}

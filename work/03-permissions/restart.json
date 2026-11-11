@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "run_id": "eed39d5c-d19f-40f8-bbb1-70dd5fa4c274",
+  "time_utc": "2026-11-11T13:54:50.521217+00:00",
+  "source_sha256": "995911f993bd9826e2b5accafcbb9577365d04612f6b3657da6a120804eee32c",
+  "expected_state": "fixed",
+  "expectation_met": true,
+  "permissions_evidence": "POSIX metadata + current-user service I/O; no separate-UID test",
+  "results": [
+    {
+      "challenge": "03",
+      "security_pass": true,
+      "functionality_pass": true,
+      "technical_pass": true,
+      "baseline_reproduced": false,
+      "written_review": "PENDING — required for full completion",
+      "technical_flag": "FLAG{repair_03_cf9e17c97fa7}",
+      "checks": [
+        {
+          "category": "functionality",
+          "name": "service_reads_as_current_user",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:private",
+          "passed": true,
+          "observed": {
+            "mode": "0700",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:private/service-state.json",
+          "passed": true,
+          "observed": {
+            "mode": "0600",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:exchange",
+          "passed": true,
+          "observed": {
+            "mode": "0755",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:exchange/checkpoint.json",
+          "passed": true,
+          "observed": {
+            "mode": "0600",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:exchange/status.json",
+          "passed": true,
+          "observed": {
+            "mode": "0644",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "functionality",
+          "name": "public_status_remains_shareable:initial",
+          "passed": true,
+          "observed": "0644"
+        },
+        {
+          "category": "functionality",
+          "name": "increment_and_reread",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "checkpoint_created",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:private",
+          "passed": true,
+          "observed": {
+            "mode": "0700",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:private/service-state.json",
+          "passed": true,
+          "observed": {
+            "mode": "0600",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:exchange",
+          "passed": true,
+          "observed": {
+            "mode": "0755",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:exchange/checkpoint.json",
+          "passed": true,
+          "observed": {
+            "mode": "0600",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:exchange/status.json",
+          "passed": true,
+          "observed": {
+            "mode": "0644",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "functionality",
+          "name": "public_status_remains_shareable:after_checkpoint",
+          "passed": true,
+          "observed": "0644"
+        },
+        {
+          "category": "security",
+          "name": "service_api_requires_auth",
+          "passed": true,
+          "observed": 401
+        },
+        {
+          "category": "functionality",
+          "name": "checker_restores_counter",
+          "passed": true,
+          "observed": 200
+        }
+      ],
+      "baseline_witnesses": {
+        "unsafe_mode:private": false,
+        "unsafe_mode:private/service-state.json": false,
+        "unsafe_mode:exchange": false,
+        "unsafe_mode:exchange/checkpoint.json": false
+      },
+      "errors": []
+    }
+  ]
+}

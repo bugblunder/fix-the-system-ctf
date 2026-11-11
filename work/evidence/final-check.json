@@ -1,0 +1,1875 @@
+{
+  "schema_version": 2,
+  "run_id": "4860887a-8c19-43bd-aba1-1e514e81ef90",
+  "time_utc": "2026-11-11T14:05:14.767591+00:00",
+  "source_sha256": "45b99110d90915f30d1dede7a4ec51128a4b11e1a40f7843a6029b173a38b62a",
+  "expected_state": "fixed",
+  "expectation_met": true,
+  "permissions_evidence": "POSIX metadata + current-user service I/O; no separate-UID test",
+  "results": [
+    {
+      "challenge": "01",
+      "security_pass": true,
+      "functionality_pass": true,
+      "technical_pass": true,
+      "baseline_reproduced": false,
+      "written_review": "PENDING \u2014 required for full completion",
+      "technical_flag": "FLAG{repair_01_00a0895f4a33}",
+      "checks": [
+        {
+          "category": "security",
+          "name": "authentication:/api/invoices",
+          "passed": true,
+          "observed": 401
+        },
+        {
+          "category": "security",
+          "name": "authentication:/api/invoices",
+          "passed": true,
+          "observed": 401
+        },
+        {
+          "category": "security",
+          "name": "authentication:/api/invoices/513496474603100760",
+          "passed": true,
+          "observed": 401
+        },
+        {
+          "category": "security",
+          "name": "authentication:/api/invoices/513496474603100760",
+          "passed": true,
+          "observed": 401
+        },
+        {
+          "category": "security",
+          "name": "authentication:/api/receipts/r-3a902931cd447e35b8b6d8fe",
+          "passed": true,
+          "observed": 401
+        },
+        {
+          "category": "security",
+          "name": "authentication:/api/receipts/r-3a902931cd447e35b8b6d8fe",
+          "passed": true,
+          "observed": 401
+        },
+        {
+          "category": "functionality",
+          "name": "list_contains_allowed:alice",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "list_scope:alice",
+          "passed": true,
+          "observed": 3
+        },
+        {
+          "category": "functionality",
+          "name": "read:alice:/api/invoices/513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:alice:/api/receipts/r-3a902931cd447e35b8b6d8fe",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:alice:513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:alice:513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:alice:/api/invoices/963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:alice:/api/receipts/r-c324c9859b810e766ec9d286",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:alice:963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:alice:963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:alice:/api/invoices/255593089439283388",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:alice:/api/invoices/255593089439283388",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:alice:/api/receipts/r-8d88348a7eed8d14f06d3fef",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:alice:/api/receipts/r-8d88348a7eed8d14f06d3fef",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:alice:255593089439283388",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:alice:255593089439283388",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:alice:255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:alice:/api/invoices/780353240361996767",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:alice:/api/invoices/780353240361996767",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:alice:/api/receipts/r-f3c64af775a89294c2cd789a",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:alice:/api/receipts/r-f3c64af775a89294c2cd789a",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:alice:780353240361996767",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:alice:780353240361996767",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:alice:780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:alice:/api/invoices/1015993471593092170",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:alice:/api/invoices/1015993471593092170",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:alice:/api/receipts/r-f8130c4237730edfafbd67f9",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:alice:/api/receipts/r-f8130c4237730edfafbd67f9",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:alice:1015993471593092170",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:alice:1015993471593092170",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:alice:1015993471593092170",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:alice:/api/invoices/365971457039397689",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:alice:/api/invoices/365971457039397689",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:alice:/api/receipts/r-a648a7dd06839eb905b6e6e3",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:alice:/api/receipts/r-a648a7dd06839eb905b6e6e3",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:alice:365971457039397689",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:alice:365971457039397689",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:alice:365971457039397689",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:alice:/api/invoices/751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:alice:/api/receipts/r-18072e8c35bf992dc9e9c616",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:alice:751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:alice:751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "list_contains_allowed:bob",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "list_scope:bob",
+          "passed": true,
+          "observed": 2
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/invoices/513496474603100760",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/invoices/513496474603100760",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/receipts/r-3a902931cd447e35b8b6d8fe",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/receipts/r-3a902931cd447e35b8b6d8fe",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:bob:513496474603100760",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:bob:513496474603100760",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:bob:513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/invoices/963571565892496614",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/invoices/963571565892496614",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/receipts/r-c324c9859b810e766ec9d286",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/receipts/r-c324c9859b810e766ec9d286",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:bob:963571565892496614",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:bob:963571565892496614",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:bob:963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/invoices/255593089439283388",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/invoices/255593089439283388",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/receipts/r-8d88348a7eed8d14f06d3fef",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/receipts/r-8d88348a7eed8d14f06d3fef",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:bob:255593089439283388",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:bob:255593089439283388",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:bob:255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/invoices/780353240361996767",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/invoices/780353240361996767",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/receipts/r-f3c64af775a89294c2cd789a",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/receipts/r-f3c64af775a89294c2cd789a",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:bob:780353240361996767",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:bob:780353240361996767",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:bob:780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:bob:/api/invoices/1015993471593092170",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:bob:/api/receipts/r-f8130c4237730edfafbd67f9",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:bob:1015993471593092170",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:bob:1015993471593092170",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:bob:/api/invoices/365971457039397689",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:bob:/api/receipts/r-a648a7dd06839eb905b6e6e3",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:bob:365971457039397689",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:bob:365971457039397689",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/invoices/751235553565151329",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/invoices/751235553565151329",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:bob:/api/receipts/r-18072e8c35bf992dc9e9c616",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:bob:/api/receipts/r-18072e8c35bf992dc9e9c616",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:bob:751235553565151329",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:bob:751235553565151329",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:bob:751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "list_contains_allowed:casey",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "list_scope:casey",
+          "passed": true,
+          "observed": 2
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/invoices/513496474603100760",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/invoices/513496474603100760",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/receipts/r-3a902931cd447e35b8b6d8fe",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/receipts/r-3a902931cd447e35b8b6d8fe",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:casey:513496474603100760",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:casey:513496474603100760",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:casey:513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/invoices/963571565892496614",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/invoices/963571565892496614",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/receipts/r-c324c9859b810e766ec9d286",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/receipts/r-c324c9859b810e766ec9d286",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:casey:963571565892496614",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:casey:963571565892496614",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:casey:963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:casey:/api/invoices/255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:casey:/api/receipts/r-8d88348a7eed8d14f06d3fef",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:casey:255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:casey:255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:casey:/api/invoices/780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:casey:/api/receipts/r-f3c64af775a89294c2cd789a",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:casey:780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:casey:780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/invoices/1015993471593092170",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/invoices/1015993471593092170",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/receipts/r-f8130c4237730edfafbd67f9",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/receipts/r-f8130c4237730edfafbd67f9",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:casey:1015993471593092170",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:casey:1015993471593092170",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:casey:1015993471593092170",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/invoices/365971457039397689",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/invoices/365971457039397689",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/receipts/r-a648a7dd06839eb905b6e6e3",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/receipts/r-a648a7dd06839eb905b6e6e3",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:casey:365971457039397689",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:casey:365971457039397689",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:casey:365971457039397689",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/invoices/751235553565151329",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/invoices/751235553565151329",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:casey:/api/receipts/r-18072e8c35bf992dc9e9c616",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:casey:/api/receipts/r-18072e8c35bf992dc9e9c616",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:casey:751235553565151329",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:casey:751235553565151329",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:casey:751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "list_contains_allowed:manager",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "list_scope:manager",
+          "passed": true,
+          "observed": 5
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/invoices/513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/receipts/r-3a902931cd447e35b8b6d8fe",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "write:manager:513496474603100760",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:manager:513496474603100760",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:manager:513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/invoices/963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/receipts/r-c324c9859b810e766ec9d286",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "write:manager:963571565892496614",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:manager:963571565892496614",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:manager:963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/invoices/255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/receipts/r-8d88348a7eed8d14f06d3fef",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "write:manager:255593089439283388",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:manager:255593089439283388",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:manager:255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/invoices/780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/receipts/r-f3c64af775a89294c2cd789a",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "write:manager:780353240361996767",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:manager:780353240361996767",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:manager:780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:manager:/api/invoices/1015993471593092170",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:manager:/api/invoices/1015993471593092170",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:manager:/api/receipts/r-f8130c4237730edfafbd67f9",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:manager:/api/receipts/r-f8130c4237730edfafbd67f9",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:manager:1015993471593092170",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:manager:1015993471593092170",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:manager:1015993471593092170",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "read:manager:/api/invoices/365971457039397689",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:manager:/api/invoices/365971457039397689",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "read:manager:/api/receipts/r-a648a7dd06839eb905b6e6e3",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit:read:manager:/api/receipts/r-a648a7dd06839eb905b6e6e3",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "security",
+          "name": "write:manager:365971457039397689",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:manager:365971457039397689",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:manager:365971457039397689",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/invoices/751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:manager:/api/receipts/r-18072e8c35bf992dc9e9c616",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "write:manager:751235553565151329",
+          "passed": true,
+          "observed": 403
+        },
+        {
+          "category": "security",
+          "name": "audit_write:manager:751235553565151329",
+          "passed": true,
+          "observed": 1
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:manager:751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "list_contains_allowed:admin",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "list_scope:admin",
+          "passed": true,
+          "observed": 7
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/invoices/513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/receipts/r-3a902931cd447e35b8b6d8fe",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:admin:513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:admin:513496474603100760",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/invoices/963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/receipts/r-c324c9859b810e766ec9d286",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:admin:963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:admin:963571565892496614",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/invoices/255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/receipts/r-8d88348a7eed8d14f06d3fef",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:admin:255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:admin:255593089439283388",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/invoices/780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/receipts/r-f3c64af775a89294c2cd789a",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:admin:780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:admin:780353240361996767",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/invoices/1015993471593092170",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/receipts/r-f8130c4237730edfafbd67f9",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:admin:1015993471593092170",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:admin:1015993471593092170",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/invoices/365971457039397689",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/receipts/r-a648a7dd06839eb905b6e6e3",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:admin:365971457039397689",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:admin:365971457039397689",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/invoices/751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "read:admin:/api/receipts/r-18072e8c35bf992dc9e9c616",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "write:admin:751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "restore_note:admin:751235553565151329",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:alice:owner",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:alice:team",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:alice:amount",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:alice:id",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:alice:receipt",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:bob:owner",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:bob:team",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:bob:amount",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:bob:id",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:bob:receipt",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:casey:owner",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:casey:team",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:casey:amount",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:casey:id",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:casey:receipt",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:admin:owner",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:admin:team",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:admin:amount",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:admin:id",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "mass_assignment:admin:receipt",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "invalid_update",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "invalid_update",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "security",
+          "name": "invalid_update",
+          "passed": true,
+          "observed": 400
+        },
+        {
+          "category": "functionality",
+          "name": "unknown_resource_and_distinct_log",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "credentials_absent_from_logs",
+          "passed": true,
+          "observed": "checked all fixture tokens"
+        }
+      ],
+      "baseline_witnesses": {
+        "list_leak:alice": false,
+        "read:alice:/api/invoices/255593089439283388": false,
+        "read:alice:/api/receipts/r-8d88348a7eed8d14f06d3fef": false,
+        "write:alice:255593089439283388": false,
+        "read:alice:/api/invoices/780353240361996767": false,
+        "read:alice:/api/receipts/r-f3c64af775a89294c2cd789a": false,
+        "write:alice:780353240361996767": false,
+        "read:alice:/api/invoices/1015993471593092170": false,
+        "read:alice:/api/receipts/r-f8130c4237730edfafbd67f9": false,
+        "write:alice:1015993471593092170": false,
+        "read:alice:/api/invoices/365971457039397689": false,
+        "read:alice:/api/receipts/r-a648a7dd06839eb905b6e6e3": false,
+        "write:alice:365971457039397689": false,
+        "list_leak:bob": false,
+        "read:bob:/api/invoices/513496474603100760": false,
+        "read:bob:/api/receipts/r-3a902931cd447e35b8b6d8fe": false,
+        "write:bob:513496474603100760": false,
+        "read:bob:/api/invoices/963571565892496614": false,
+        "read:bob:/api/receipts/r-c324c9859b810e766ec9d286": false,
+        "write:bob:963571565892496614": false,
+        "read:bob:/api/invoices/255593089439283388": false,
+        "read:bob:/api/receipts/r-8d88348a7eed8d14f06d3fef": false,
+        "write:bob:255593089439283388": false,
+        "read:bob:/api/invoices/780353240361996767": false,
+        "read:bob:/api/receipts/r-f3c64af775a89294c2cd789a": false,
+        "write:bob:780353240361996767": false,
+        "read:bob:/api/invoices/751235553565151329": false,
+        "read:bob:/api/receipts/r-18072e8c35bf992dc9e9c616": false,
+        "write:bob:751235553565151329": false,
+        "list_leak:casey": false,
+        "read:casey:/api/invoices/513496474603100760": false,
+        "read:casey:/api/receipts/r-3a902931cd447e35b8b6d8fe": false,
+        "write:casey:513496474603100760": false,
+        "read:casey:/api/invoices/963571565892496614": false,
+        "read:casey:/api/receipts/r-c324c9859b810e766ec9d286": false,
+        "write:casey:963571565892496614": false,
+        "read:casey:/api/invoices/1015993471593092170": false,
+        "read:casey:/api/receipts/r-f8130c4237730edfafbd67f9": false,
+        "write:casey:1015993471593092170": false,
+        "read:casey:/api/invoices/365971457039397689": false,
+        "read:casey:/api/receipts/r-a648a7dd06839eb905b6e6e3": false,
+        "write:casey:365971457039397689": false,
+        "read:casey:/api/invoices/751235553565151329": false,
+        "read:casey:/api/receipts/r-18072e8c35bf992dc9e9c616": false,
+        "write:casey:751235553565151329": false,
+        "list_leak:manager": false,
+        "write:manager:513496474603100760": false,
+        "write:manager:963571565892496614": false,
+        "write:manager:255593089439283388": false,
+        "write:manager:780353240361996767": false,
+        "read:manager:/api/invoices/1015993471593092170": false,
+        "read:manager:/api/receipts/r-f8130c4237730edfafbd67f9": false,
+        "write:manager:1015993471593092170": false,
+        "read:manager:/api/invoices/365971457039397689": false,
+        "read:manager:/api/receipts/r-a648a7dd06839eb905b6e6e3": false,
+        "write:manager:365971457039397689": false,
+        "write:manager:751235553565151329": false,
+        "mass_assignment:alice:owner": false,
+        "mass_assignment:alice:team": false,
+        "mass_assignment:alice:amount": false,
+        "mass_assignment:alice:id": false,
+        "mass_assignment:alice:receipt": false,
+        "mass_assignment:bob:owner": false,
+        "mass_assignment:bob:team": false,
+        "mass_assignment:bob:amount": false,
+        "mass_assignment:bob:id": false,
+        "mass_assignment:bob:receipt": false,
+        "mass_assignment:casey:owner": false,
+        "mass_assignment:casey:team": false,
+        "mass_assignment:casey:amount": false,
+        "mass_assignment:casey:id": false,
+        "mass_assignment:casey:receipt": false,
+        "mass_assignment:admin:owner": false,
+        "mass_assignment:admin:team": false,
+        "mass_assignment:admin:amount": false,
+        "mass_assignment:admin:id": false,
+        "mass_assignment:admin:receipt": false
+      },
+      "errors": []
+    },
+    {
+      "challenge": "02",
+      "security_pass": true,
+      "functionality_pass": true,
+      "technical_pass": true,
+      "baseline_reproduced": false,
+      "written_review": "PENDING \u2014 required for full completion",
+      "technical_flag": "FLAG{repair_02_f5b56613ca46}",
+      "checks": [
+        {
+          "category": "security",
+          "name": "not_served:private/runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:backups/runtime.json.bak",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:%70rivate/runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/../private/runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/%2e%2e/backups/runtime.json.bak",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:backups/runtime.json.bak?download=1",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:private%2fruntime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/%252e%252e/private/runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/%252e%252e%252fprivate%252fruntime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/leak.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/../../policy.py",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/../private//runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "functionality",
+          "name": "download:guide.txt",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "download:theme.css",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "download:notice-414c343c.txt",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "runtime_catalog",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "key_rotated",
+          "passed": true,
+          "observed": "compared without recording key"
+        },
+        {
+          "category": "security",
+          "name": "backup_removed",
+          "passed": true,
+          "observed": "on-disk artifact check"
+        },
+        {
+          "category": "security",
+          "name": "compromised_key_removed_from_deployment",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "category": "functionality",
+          "name": "current_key_signs",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_signature_verifies",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "old_key_revoked",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "invalid_signature_rejected",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_key_signs",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_signature_verifies",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "old_key_revoked",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "invalid_signature_rejected",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_key_signs",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_signature_verifies",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "old_key_revoked",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "invalid_signature_rejected",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "unknown_download",
+          "passed": true,
+          "observed": 404
+        }
+      ],
+      "baseline_witnesses": {
+        "private/runtime.json": false,
+        "backups/runtime.json.bak": false,
+        "old_key_still_valid": false
+      },
+      "errors": []
+    },
+    {
+      "challenge": "03",
+      "security_pass": true,
+      "functionality_pass": true,
+      "technical_pass": true,
+      "baseline_reproduced": false,
+      "written_review": "PENDING \u2014 required for full completion",
+      "technical_flag": "FLAG{repair_03_cf9e17c97fa7}",
+      "checks": [
+        {
+          "category": "functionality",
+          "name": "service_reads_as_current_user",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:private",
+          "passed": true,
+          "observed": {
+            "mode": "0700",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:private/service-state.json",
+          "passed": true,
+          "observed": {
+            "mode": "0600",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:exchange",
+          "passed": true,
+          "observed": {
+            "mode": "0755",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:exchange/checkpoint.json",
+          "passed": true,
+          "observed": {
+            "mode": "0600",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:initial:exchange/status.json",
+          "passed": true,
+          "observed": {
+            "mode": "0644",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "functionality",
+          "name": "public_status_remains_shareable:initial",
+          "passed": true,
+          "observed": "0644"
+        },
+        {
+          "category": "functionality",
+          "name": "increment_and_reread",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "checkpoint_created",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:private",
+          "passed": true,
+          "observed": {
+            "mode": "0700",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:private/service-state.json",
+          "passed": true,
+          "observed": {
+            "mode": "0600",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:exchange",
+          "passed": true,
+          "observed": {
+            "mode": "0755",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:exchange/checkpoint.json",
+          "passed": true,
+          "observed": {
+            "mode": "0600",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "security",
+          "name": "mode_policy:after_checkpoint:exchange/status.json",
+          "passed": true,
+          "observed": {
+            "mode": "0644",
+            "owner_is_service": true,
+            "evidence_type": "filesystem_metadata"
+          }
+        },
+        {
+          "category": "functionality",
+          "name": "public_status_remains_shareable:after_checkpoint",
+          "passed": true,
+          "observed": "0644"
+        },
+        {
+          "category": "security",
+          "name": "service_api_requires_auth",
+          "passed": true,
+          "observed": 401
+        },
+        {
+          "category": "functionality",
+          "name": "checker_restores_counter",
+          "passed": true,
+          "observed": 200
+        }
+      ],
+      "baseline_witnesses": {
+        "unsafe_mode:private": false,
+        "unsafe_mode:private/service-state.json": false,
+        "unsafe_mode:exchange": false,
+        "unsafe_mode:exchange/checkpoint.json": false
+      },
+      "errors": []
+    }
+  ]
+}

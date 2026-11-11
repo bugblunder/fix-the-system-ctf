@@ -1,0 +1,31 @@
+diff --git a/challenges/02-exposure/policy.py b/challenges/02-exposure/policy.py
+index 95ab95e..9b70bd0 100644
+--- a/challenges/02-exposure/policy.py
++++ b/challenges/02-exposure/policy.py
+@@ -1 +1 @@
+-"""Participant edit surface: decide what can be downloaded."""
++"""Reference policy: only canonical paths inside the public tree are downloadable."""
+@@ -4,0 +5 @@ def resolve_public(site, name):
++    public = (site / "public").resolve()
+@@ -6 +7 @@ def resolve_public(site, name):
+-    if not target.is_relative_to(site.resolve()):
++    if not target.is_relative_to(public):
+diff --git a/challenges/02-exposure/site/backups/runtime.json.bak b/challenges/02-exposure/site/backups/runtime.json.bak
+deleted file mode 100644
+index 6765543..0000000
+--- a/challenges/02-exposure/site/backups/runtime.json.bak
++++ /dev/null
+@@ -1,6 +0,0 @@
+-{
+-  "store": "Repair Shop 2201",
+-  "currency": "INR",
+-  "price": 1533,
+-  "signing_key": "d77d32d118cab4860246ef317f3ef55a8a44e2863ecf33008a268329a83fccea"
+-}
+diff --git a/challenges/02-exposure/site/private/runtime.json b/challenges/02-exposure/site/private/runtime.json
+index 6765543..7630363 100644
+--- a/challenges/02-exposure/site/private/runtime.json
++++ b/challenges/02-exposure/site/private/runtime.json
+@@ -5 +5 @@
+-  "signing_key": "d77d32d118cab4860246ef317f3ef55a8a44e2863ecf33008a268329a83fccea"
++  "signing_key": "ecad1ef02700bebc97508ccfac6933a200da3648aa4a594c5fb75bdef9d3efd3"

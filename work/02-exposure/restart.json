@@ -1,0 +1,220 @@
+{
+  "schema_version": 2,
+  "run_id": "eed39d5c-d19f-40f8-bbb1-70dd5fa4c274",
+  "time_utc": "2026-11-11T13:54:50.521217+00:00",
+  "source_sha256": "995911f993bd9826e2b5accafcbb9577365d04612f6b3657da6a120804eee32c",
+  "expected_state": "fixed",
+  "expectation_met": true,
+  "permissions_evidence": "POSIX metadata + current-user service I/O; no separate-UID test",
+  "results": [
+    {
+      "challenge": "02",
+      "security_pass": true,
+      "functionality_pass": true,
+      "technical_pass": true,
+      "baseline_reproduced": false,
+      "written_review": "PENDING — required for full completion",
+      "technical_flag": "FLAG{repair_02_a6491310bba2}",
+      "checks": [
+        {
+          "category": "security",
+          "name": "not_served:private/runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:backups/runtime.json.bak",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:%70rivate/runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/../private/runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/%2e%2e/backups/runtime.json.bak",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:backups/runtime.json.bak?download=1",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:private%2fruntime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/%252e%252e/private/runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/%252e%252e%252fprivate%252fruntime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/leak.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/../../policy.py",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "security",
+          "name": "not_served:public/../private//runtime.json",
+          "passed": true,
+          "observed": 404
+        },
+        {
+          "category": "functionality",
+          "name": "download:guide.txt",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "download:theme.css",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "download:notice-f7ae9466.txt",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "runtime_catalog",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "key_rotated",
+          "passed": true,
+          "observed": "compared without recording key"
+        },
+        {
+          "category": "security",
+          "name": "backup_removed",
+          "passed": true,
+          "observed": "on-disk artifact check"
+        },
+        {
+          "category": "security",
+          "name": "compromised_key_removed_from_deployment",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "category": "functionality",
+          "name": "current_key_signs",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_signature_verifies",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "old_key_revoked",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "invalid_signature_rejected",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_key_signs",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_signature_verifies",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "old_key_revoked",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "invalid_signature_rejected",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_key_signs",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "current_signature_verifies",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "old_key_revoked",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "security",
+          "name": "invalid_signature_rejected",
+          "passed": true,
+          "observed": 200
+        },
+        {
+          "category": "functionality",
+          "name": "unknown_download",
+          "passed": true,
+          "observed": 404
+        }
+      ],
+      "baseline_witnesses": {
+        "private/runtime.json": false,
+        "backups/runtime.json.bak": false,
+        "old_key_still_valid": false
+      },
+      "errors": []
+    }
+  ]
+}

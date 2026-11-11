@@ -1,83 +1,27 @@
-# Your investigation workspace
+# Engineering evidence workspace
 
-This directory provides structure only. The finding files are unfilled templates,
-`patch.diff` files are empty, and before/after JSON files explicitly say NOT_RUN.
-Nothing in this directory represents a completed personal contribution yet.
-See [ASSISTED.md](../ASSISTED.md) for attribution boundaries.
+This workspace now contains AI-assisted technical findings and retained automated evidence for all three repairs. It does **not** claim that a human participant independently performed the investigation or that a facilitator has reviewed/scored the findings. See [`../ASSISTED.md`](../ASSISTED.md) for attribution boundaries.
 
-## Before your first substantive commit
+## Challenge records
 
-The Git history contains the unmodified release tagged `v2-baseline`, followed
-by a separately identified assisted setup commit. Configure your own name/email:
+Each challenge directory contains:
 
-```sh
-git config user.name "YOUR NAME"
-git config user.email "YOUR VERIFIED GIT EMAIL"
-git switch -c work/challenge-01
-```
+- `finding.md`: technical finding based on source diffs and actual lab output; facilitator section remains pending.
+- `patch.diff`: challenge-specific diff against `v2-baseline`.
+- `before.json`: scoped result from the native vulnerable-baseline phase.
+- `after.json`: scoped result from the fixed/reference phase.
+- `restart.json`: scoped result after restarting the fixed services.
 
-Choose the actual name and email you want associated with your own contributions.
-Do not relabel the baseline or setup history as independently authored work.
+The full reports, final checker JSON (including technical flags/source hash), native suite summary, command transcript and contract-test log are under [`evidence/`](evidence/). The before/after reports are machine-generated and preserve run IDs, source hashes and checker observations.
 
-## Predict before testing
+## Validation status
 
-Fill in [BAD_FIX_PREDICTIONS.md](BAD_FIX_PREDICTIONS.md) with your own ideas and
-predictions before you write/run the cases. Commit that prediction, then implement
-and execute the experiment, save its output, and record the actual result in a
-later commit. Keep incorrect predictions and explain what changed your reasoning.
+The retained complete wrapper run is [`evidence/validation-summary.json`](evidence/validation-summary.json). It records both the 27-test contract suite and native end-to-end suite exiting successfully. Native phases cover baseline, reference repair, restart, negative controls and reset. A subsequent repeat attempt is also recorded in [`evidence/rerun-attempt.md`](evidence/rerun-attempt.md): contracts passed, but native startup stalled before a completed checker result. The earlier complete successful run is preserved separately. The current project validation evidence is local; it is not hosted GitHub Actions CI. See [`CI_RECORD.md`](CI_RECORD.md).
 
-## Evidence for a challenge
+## Prediction and authorship boundary
 
-Each challenge directory contains `finding.md`, `patch.diff`, `before.json` and
-`after.json`. Fill the finding from your observations and include alternatives
-considered and rejected. No findings or patches have been written for you here.
+[`BAD_FIX_PREDICTIONS.md`](BAD_FIX_PREDICTIONS.md) is intentionally not backfilled as if predictions had been made before testing. Retrospective alternatives and their test evidence are documented in each finding, but that is not preregistered experimental work.
 
-For challenge 01, the sequence below captures evidence without providing a fix:
+## Remaining independent work
 
-1. Stop any running lab. Run `python3 manage.py reset --challenge 01 --yes`.
-2. Copy `fixtures/01.json` to `work/01-authorization/fixture.json` so the random
-   inputs used in the paired reports can be identified. These are synthetic values.
-3. Start `python3 run_lab.py --challenge 01` in another terminal.
-4. Run the baseline check:
-
-   ```sh
-   python3 check.py --challenge 01 --expect vulnerable --json work/01-authorization/before.json
-   ```
-
-5. Stop the runner. Develop your own patch and record your reasoning. Restart it
-   without another reset so the before/after comparison uses the same fixtures.
-6. Run the fixed-state check, then preserve the challenge-only diff:
-
-   ```sh
-   python3 check.py --challenge 01 --json work/01-authorization/after.json
-   git diff v2-baseline -- challenges/01-authorization > work/01-authorization/patch.diff
-   ```
-
-7. Capture a legitimate-operation example and repeat the fixed-state check after
-   a further restart. Save that restart report under a separate filename.
-8. Complete your finding and inspect `git diff` before committing. Include only
-   the relevant challenge changes, your test additions, necessary fixture/evidence
-   files and your notes. Keep unconnected challenge work separate.
-
-Use the corresponding ID and path for 02 and 03. Do not reset between before/after
-runs. If you do reset, capture a new baseline against the regenerated fixtures.
-The existing release evidence is useful for comparison but does not replace your
-own measured results. For 03, label mode observations separately from any future
-real second-user experiment.
-
-## Hosted CI
-
-Follow [GITHUB_SETUP.md](GITHUB_SETUP.md), then fill [CI_RECORD.md](CI_RECORD.md)
-from the actual run. The shipped workflow already uploads validation artifacts.
-Do not add a passing badge before a corresponding hosted result exists.
-
-## Pilot and completion
-
-Run the [pilot protocol](../evaluation/PROTOCOL.md) only after the grader/tests
-are settled. Record the release and commit given to participants. Keep real pilot
-data separate from automated validation, with unfinished attempts and denominators.
-The [results template](../evaluation/RESULTS_TEMPLATE.md) remains unfilled.
-
-Review with `git log --oneline v2-baseline..HEAD` and inspect each commit. Being
-able to explain a change from contemporaneous notes is a useful readiness test;
-commit order alone does not establish authorship or understanding.
+A facilitator must inspect the source diffs and evidence, assess the findings against the rubric, record feedback, and decide whether to accept the work as full completion. Challenge 03's evidence is POSIX metadata plus same-UID service I/O; no separate-UID isolation test is claimed. Hosted CI and pilot results are also not claimed.

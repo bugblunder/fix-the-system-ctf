@@ -1,0 +1,38 @@
+{
+  "time_utc": "2026-11-11T13:54:37.266198+00:00",
+  "platform": "linux",
+  "python": "3.13.5",
+  "uid": 65534,
+  "phases": [
+    {
+      "phase": "baseline",
+      "expectation_met": true,
+      "assertions": 339
+    },
+    {
+      "phase": "reference",
+      "expectation_met": true,
+      "assertions": 339
+    },
+    {
+      "phase": "restart",
+      "expectation_met": true,
+      "assertions": 339
+    },
+    {
+      "phase": "reject-read-only-state",
+      "expectation_met": true
+    },
+    {
+      "phase": "missing-state-is-error",
+      "expectation_met": true
+    },
+    {
+      "phase": "reset",
+      "expectation_met": true,
+      "assertions": 341
+    }
+  ],
+  "passed": true,
+  "permissions_evidence": "real metadata and same-user I/O; no different-UID isolation claim"
+}
