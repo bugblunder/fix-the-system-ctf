@@ -36,7 +36,7 @@ class InvoiceHandler(Handler):
         invoice = INVOICES[key]
         operation = "write" if self.command == "PATCH" else "read"
         # The alternate lookup is a separate enforcement point to investigate.
-        if direct and not can_access(actor, invoice, operation):
+        if not can_access(actor, invoice, operation):
             self.event("authorization_denied", actor, key)
             return self.send(403, {"error": "forbidden"})
         if self.command == "GET":

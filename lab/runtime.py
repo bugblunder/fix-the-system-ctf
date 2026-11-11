@@ -41,7 +41,7 @@ def service(root, key, port, live):
         process = subprocess.Popen([sys.executable, "-B", str(challenge / entry)],
                                    cwd=root, env=env, stdout=output, stderr=output)
         try:
-            for _ in range(160):
+            for _ in range(400):
                 if process.poll() is not None:
                     raise RuntimeError("Service exited: " + log.read_text()[-2000:])
                 # A health reply alone could belong to a preexisting process.
