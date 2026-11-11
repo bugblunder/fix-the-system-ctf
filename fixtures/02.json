@@ -1,0 +1,13 @@
+{
+  "compromised_key": "d77d32d118cab4860246ef317f3ef55a8a44e2863ecf33008a268329a83fccea",
+  "catalog": {
+    "store": "Repair Shop 2201",
+    "currency": "INR",
+    "price": 1533
+  },
+  "public_files": {
+    "guide.txt": "Repair Shop guide: repair and preserve behavior.\n",
+    "theme.css": "body { font-family: sans-serif; }\n",
+    "notice-414c343c.txt": "f34d3eab415b5cab3e6be3c0"
+  }
+}

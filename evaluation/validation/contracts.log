@@ -1,0 +1,32 @@
+test_all_references_preserve_behavior (test_contracts.Contracts.test_all_references_preserve_behavior) ... ok
+test_all_vulnerable_baselines (test_contracts.Contracts.test_all_vulnerable_baselines) ... ok
+test_backup_only_blocklist_fails (test_contracts.Contracts.test_backup_only_blocklist_fails) ... ok
+test_block_all_downloads_breaks_feature (test_contracts.Contracts.test_block_all_downloads_breaks_feature) ... ok
+test_catalog_reloads_real_config (test_contracts.Contracts.test_catalog_reloads_real_config) ... ok
+test_checker_restores_counter (test_contracts.Contracts.test_checker_restores_counter) ... ok
+test_checker_restores_invoices (test_contracts.Contracts.test_checker_restores_invoices) ... ok
+test_containment_alone_does_not_remediate_compromise (test_contracts.Contracts.test_containment_alone_does_not_remediate_compromise) ... ok
+test_correct_policy_with_indirect_bypass_fails (test_contracts.Contracts.test_correct_policy_with_indirect_bypass_fails) ... ok
+test_deleted_config_breaks_functionality (test_contracts.Contracts.test_deleted_config_breaks_functionality) ... ok
+test_deny_all_and_admin_only_fail_functionality (test_contracts.Contracts.test_deny_all_and_admin_only_fail_functionality) ... ok
+test_disabling_updates_fails_functionality (test_contracts.Contracts.test_disabling_updates_fails_functionality) ... ok
+test_fixture_generation_changes_ids_and_credentials (test_contracts.Contracts.test_fixture_generation_changes_ids_and_credentials) ... ok
+test_group_write_and_unsafe_creation_fail (test_contracts.Contracts.test_group_write_and_unsafe_creation_fail) ... ok
+test_known_id_allowlist_does_not_win (test_contracts.Contracts.test_known_id_allowlist_does_not_win) ... ok
+test_manager_write_privileges_fail (test_contracts.Contracts.test_manager_write_privileges_fail) ... ok
+test_missing_denial_logging_fails_checker (test_contracts.Contracts.test_missing_denial_logging_fails_checker) ... ok
+test_missing_state_is_error_not_secure (test_contracts.Contracts.test_missing_state_is_error_not_secure) ... ok
+test_object_check_without_field_allowlist_fails (test_contracts.Contracts.test_object_check_without_field_allowlist_fails) ... ok
+test_partial_note_mutation_before_rejection_fails (test_contracts.Contracts.test_partial_note_mutation_before_rejection_fails) ... ok
+test_permission_metadata_refuses_symlinks (test_contracts.Contracts.test_permission_metadata_refuses_symlinks) ... ok
+test_private_exchange_breaks_public_contract (test_contracts.Contracts.test_private_exchange_breaks_public_contract) ... ok
+test_read_only_state_breaks_increment (test_contracts.Contracts.test_read_only_state_breaks_increment) ... ok
+test_reference_over_multiple_randomized_shapes (test_contracts.Contracts.test_reference_over_multiple_randomized_shapes) ... ok
+test_reset_randomizes_and_snapshots_scoped_work (test_contracts.Contracts.test_reset_randomizes_and_snapshots_scoped_work) ... ok
+test_rotation_without_removing_backup_fails (test_contracts.Contracts.test_rotation_without_removing_backup_fails) ... ok
+test_symlink_containment_and_double_encoding (test_contracts.Contracts.test_symlink_containment_and_double_encoding) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 6.347s
+
+OK

@@ -1,0 +1,18 @@
+{
+  "time_utc": "2026-11-11T13:14:40.847332+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "runs": [
+    {
+      "suite": "contracts",
+      "exit_code": 0,
+      "elapsed_seconds": 6.487
+    },
+    {
+      "suite": "native_e2e",
+      "exit_code": 0,
+      "elapsed_seconds": 3.303
+    }
+  ],
+  "passed": true
+}

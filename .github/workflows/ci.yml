@@ -1,0 +1,17 @@
+name: Verify native challenge contracts
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tests/validate.py --output-dir reports/ci-validation
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-validation-evidence
+          path: reports/ci-validation

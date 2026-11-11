@@ -1,0 +1,24 @@
+{
+  "time_utc": "2026-11-11T13:15:41.586668+00:00",
+  "archive": "fix-the-system-ctf-native.zip",
+  "passed": true,
+  "mode": "Fresh extraction, shipped fixtures, no reset",
+  "source_sha256": "5c810437f5a5241a310ce950ab800a021ccae1e8141b197a4165870b241ef5d1",
+  "results": [
+    {
+      "challenge": "01",
+      "baseline_reproduced": true,
+      "functionality_pass": true
+    },
+    {
+      "challenge": "02",
+      "baseline_reproduced": true,
+      "functionality_pass": true
+    },
+    {
+      "challenge": "03",
+      "baseline_reproduced": true,
+      "functionality_pass": true
+    }
+  ]
+}

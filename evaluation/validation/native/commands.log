@@ -1,0 +1,472 @@
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 manage.py reset --yes --seed 91
+01-authorization: reset; previous files saved at reports/patch-backups/20261111T131447Z-c23fee/01-authorization
+02-exposure: reset; previous files saved at reports/patch-backups/20261111T131447Z-c23fee/02-exposure
+03-permissions: reset; previous files saved at reports/patch-backups/20261111T131447Z-c23fee/03-permissions
+Stop the local runner, then restart it to load code and reseed state:
+python3 run_lab.py
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 check.py --port-base 18100 --expect vulnerable --json /workspace/scratch/e7f6a34b7308/fix-the-system-ctf/evaluation/validation/native/baseline.json
+Challenge 01: security=FAIL functionality=PASS
+  FAIL [security] list_scope:alice -> 9
+  FAIL [security] read:alice:/api/invoices/502521101622291354 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/502521101622291354 -> 0
+  FAIL [security] read:alice:/api/receipts/r-d48bcb0fb8dfd143a23b7495 -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-d48bcb0fb8dfd143a23b7495 -> 0
+  FAIL [security] write:alice:502521101622291354 -> 200
+  FAIL [security] audit_write:alice:502521101622291354 -> 0
+  FAIL [security] read:alice:/api/invoices/450717728782832146 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/450717728782832146 -> 0
+  FAIL [security] read:alice:/api/receipts/r-326a18db898513cf2f04b999 -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-326a18db898513cf2f04b999 -> 0
+  FAIL [security] write:alice:450717728782832146 -> 200
+  FAIL [security] audit_write:alice:450717728782832146 -> 0
+  FAIL [security] read:alice:/api/invoices/954828552949605899 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/954828552949605899 -> 0
+  FAIL [security] read:alice:/api/receipts/r-c84ef71943de7a35e83f813f -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-c84ef71943de7a35e83f813f -> 0
+  FAIL [security] write:alice:954828552949605899 -> 200
+  FAIL [security] audit_write:alice:954828552949605899 -> 0
+  FAIL [security] read:alice:/api/invoices/845109034137069837 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/845109034137069837 -> 0
+  FAIL [security] read:alice:/api/receipts/r-b0e02ca4c49b9b52de568d7a -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-b0e02ca4c49b9b52de568d7a -> 0
+  FAIL [security] write:alice:845109034137069837 -> 200
+  FAIL [security] audit_write:alice:845109034137069837 -> 0
+  FAIL [security] read:alice:/api/invoices/390895089001756607 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/390895089001756607 -> 0
+  FAIL [security] read:alice:/api/receipts/r-5faeea35ab9d56546264004c -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-5faeea35ab9d56546264004c -> 0
+  FAIL [security] write:alice:390895089001756607 -> 200
+  FAIL [security] audit_write:alice:390895089001756607 -> 0
+  FAIL [security] list_scope:bob -> 9
+  FAIL [security] read:bob:/api/invoices/502521101622291354 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/502521101622291354 -> 0
+  FAIL [security] read:bob:/api/receipts/r-d48bcb0fb8dfd143a23b7495 -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-d48bcb0fb8dfd143a23b7495 -> 0
+  FAIL [security] write:bob:502521101622291354 -> 200
+  FAIL [security] audit_write:bob:502521101622291354 -> 0
+  FAIL [security] read:bob:/api/invoices/536622295413396207 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/536622295413396207 -> 0
+  FAIL [security] read:bob:/api/receipts/r-3e615900416c0f13d3b6afae -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-3e615900416c0f13d3b6afae -> 0
+  FAIL [security] write:bob:536622295413396207 -> 200
+  FAIL [security] audit_write:bob:536622295413396207 -> 0
+  FAIL [security] read:bob:/api/invoices/427238894671467791 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/427238894671467791 -> 0
+  FAIL [security] read:bob:/api/receipts/r-ca9fcc15f6c53ad637bea563 -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-ca9fcc15f6c53ad637bea563 -> 0
+  FAIL [security] write:bob:427238894671467791 -> 200
+  FAIL [security] audit_write:bob:427238894671467791 -> 0
+  FAIL [security] read:bob:/api/invoices/450717728782832146 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/450717728782832146 -> 0
+  FAIL [security] read:bob:/api/receipts/r-326a18db898513cf2f04b999 -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-326a18db898513cf2f04b999 -> 0
+  FAIL [security] write:bob:450717728782832146 -> 200
+  FAIL [security] audit_write:bob:450717728782832146 -> 0
+  FAIL [security] read:bob:/api/invoices/742173945970591377 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/742173945970591377 -> 0
+  FAIL [security] read:bob:/api/receipts/r-c8cb96228ea7c82a62d88e60 -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-c8cb96228ea7c82a62d88e60 -> 0
+  FAIL [security] write:bob:742173945970591377 -> 200
+  FAIL [security] audit_write:bob:742173945970591377 -> 0
+  FAIL [security] read:bob:/api/invoices/104593593749443926 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/104593593749443926 -> 0
+  FAIL [security] read:bob:/api/receipts/r-aeba29d1fe21aec3ccface6a -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-aeba29d1fe21aec3ccface6a -> 0
+  FAIL [security] write:bob:104593593749443926 -> 200
+  FAIL [security] audit_write:bob:104593593749443926 -> 0
+  FAIL [security] list_scope:casey -> 9
+  FAIL [security] read:casey:/api/invoices/536622295413396207 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/536622295413396207 -> 0
+  FAIL [security] read:casey:/api/receipts/r-3e615900416c0f13d3b6afae -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-3e615900416c0f13d3b6afae -> 0
+  FAIL [security] write:casey:536622295413396207 -> 200
+  FAIL [security] audit_write:casey:536622295413396207 -> 0
+  FAIL [security] read:casey:/api/invoices/427238894671467791 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/427238894671467791 -> 0
+  FAIL [security] read:casey:/api/receipts/r-ca9fcc15f6c53ad637bea563 -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-ca9fcc15f6c53ad637bea563 -> 0
+  FAIL [security] write:casey:427238894671467791 -> 200
+  FAIL [security] audit_write:casey:427238894671467791 -> 0
+  FAIL [security] read:casey:/api/invoices/742173945970591377 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/742173945970591377 -> 0
+  FAIL [security] read:casey:/api/receipts/r-c8cb96228ea7c82a62d88e60 -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-c8cb96228ea7c82a62d88e60 -> 0
+  FAIL [security] write:casey:742173945970591377 -> 200
+  FAIL [security] audit_write:casey:742173945970591377 -> 0
+  FAIL [security] read:casey:/api/invoices/954828552949605899 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/954828552949605899 -> 0
+  FAIL [security] read:casey:/api/receipts/r-c84ef71943de7a35e83f813f -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-c84ef71943de7a35e83f813f -> 0
+  FAIL [security] write:casey:954828552949605899 -> 200
+  FAIL [security] audit_write:casey:954828552949605899 -> 0
+  FAIL [security] read:casey:/api/invoices/845109034137069837 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/845109034137069837 -> 0
+  FAIL [security] read:casey:/api/receipts/r-b0e02ca4c49b9b52de568d7a -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-b0e02ca4c49b9b52de568d7a -> 0
+  FAIL [security] write:casey:845109034137069837 -> 200
+  FAIL [security] audit_write:casey:845109034137069837 -> 0
+  FAIL [security] read:casey:/api/invoices/104593593749443926 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/104593593749443926 -> 0
+  FAIL [security] read:casey:/api/receipts/r-aeba29d1fe21aec3ccface6a -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-aeba29d1fe21aec3ccface6a -> 0
+  FAIL [security] write:casey:104593593749443926 -> 200
+  FAIL [security] audit_write:casey:104593593749443926 -> 0
+  FAIL [security] read:casey:/api/invoices/390895089001756607 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/390895089001756607 -> 0
+  FAIL [security] read:casey:/api/receipts/r-5faeea35ab9d56546264004c -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-5faeea35ab9d56546264004c -> 0
+  FAIL [security] write:casey:390895089001756607 -> 200
+  FAIL [security] audit_write:casey:390895089001756607 -> 0
+  FAIL [security] list_scope:manager -> 9
+  FAIL [security] write:manager:502521101622291354 -> 200
+  FAIL [security] audit_write:manager:502521101622291354 -> 0
+  FAIL [security] write:manager:536622295413396207 -> 200
+  FAIL [security] audit_write:manager:536622295413396207 -> 0
+  FAIL [security] write:manager:427238894671467791 -> 200
+  FAIL [security] audit_write:manager:427238894671467791 -> 0
+  FAIL [security] write:manager:450717728782832146 -> 200
+  FAIL [security] audit_write:manager:450717728782832146 -> 0
+  FAIL [security] write:manager:742173945970591377 -> 200
+  FAIL [security] audit_write:manager:742173945970591377 -> 0
+  FAIL [security] read:manager:/api/invoices/954828552949605899 -> 200
+  FAIL [security] audit:read:manager:/api/invoices/954828552949605899 -> 0
+  FAIL [security] read:manager:/api/receipts/r-c84ef71943de7a35e83f813f -> 200
+  FAIL [security] audit:read:manager:/api/receipts/r-c84ef71943de7a35e83f813f -> 0
+  FAIL [security] write:manager:954828552949605899 -> 200
+  FAIL [security] audit_write:manager:954828552949605899 -> 0
+  FAIL [security] read:manager:/api/invoices/845109034137069837 -> 200
+  FAIL [security] audit:read:manager:/api/invoices/845109034137069837 -> 0
+  FAIL [security] read:manager:/api/receipts/r-b0e02ca4c49b9b52de568d7a -> 200
+  FAIL [security] audit:read:manager:/api/receipts/r-b0e02ca4c49b9b52de568d7a -> 0
+  FAIL [security] write:manager:845109034137069837 -> 200
+  FAIL [security] audit_write:manager:845109034137069837 -> 0
+  FAIL [security] write:manager:104593593749443926 -> 200
+  FAIL [security] audit_write:manager:104593593749443926 -> 0
+  FAIL [security] read:manager:/api/invoices/390895089001756607 -> 200
+  FAIL [security] audit:read:manager:/api/invoices/390895089001756607 -> 0
+  FAIL [security] read:manager:/api/receipts/r-5faeea35ab9d56546264004c -> 200
+  FAIL [security] audit:read:manager:/api/receipts/r-5faeea35ab9d56546264004c -> 0
+  FAIL [security] write:manager:390895089001756607 -> 200
+  FAIL [security] audit_write:manager:390895089001756607 -> 0
+  FAIL [security] mass_assignment:alice:owner -> 200
+  FAIL [security] mass_assignment:alice:team -> 200
+  FAIL [security] mass_assignment:alice:amount -> 200
+  FAIL [security] mass_assignment:alice:id -> 200
+  FAIL [security] mass_assignment:alice:receipt -> 200
+  FAIL [security] mass_assignment:bob:owner -> 200
+  FAIL [security] mass_assignment:bob:team -> 200
+  FAIL [security] mass_assignment:bob:amount -> 200
+  FAIL [security] mass_assignment:bob:id -> 200
+  FAIL [security] mass_assignment:bob:receipt -> 200
+  FAIL [security] mass_assignment:casey:owner -> 200
+  FAIL [security] mass_assignment:casey:team -> 200
+  FAIL [security] mass_assignment:casey:amount -> 200
+  FAIL [security] mass_assignment:casey:id -> 200
+  FAIL [security] mass_assignment:casey:receipt -> 200
+  FAIL [security] mass_assignment:admin:owner -> 200
+  FAIL [security] mass_assignment:admin:team -> 200
+  FAIL [security] mass_assignment:admin:amount -> 200
+  FAIL [security] mass_assignment:admin:id -> 200
+  FAIL [security] mass_assignment:admin:receipt -> 200
+  FAIL [security] invalid_update -> 200
+  Written review: PENDING (required for full completion)
+Challenge 02: security=FAIL functionality=PASS
+  FAIL [security] not_served:private/runtime.json -> 200
+  FAIL [security] not_served:backups/runtime.json.bak -> 200
+  FAIL [security] not_served:%70rivate/runtime.json -> 200
+  FAIL [security] not_served:public/../private/runtime.json -> 200
+  FAIL [security] not_served:public/%2e%2e/backups/runtime.json.bak -> 200
+  FAIL [security] not_served:backups/runtime.json.bak?download=1 -> 200
+  FAIL [security] not_served:private%2fruntime.json -> 200
+  FAIL [security] not_served:public/../private//runtime.json -> 200
+  FAIL [security] key_rotated -> compared without recording key
+  FAIL [security] backup_removed -> on-disk artifact check
+  FAIL [security] compromised_key_removed_from_deployment -> ['backups/runtime.json.bak', 'private/runtime.json']
+  FAIL [security] old_key_revoked -> 200
+  FAIL [security] old_key_revoked -> 200
+  FAIL [security] old_key_revoked -> 200
+  Written review: PENDING (required for full completion)
+Challenge 03: security=FAIL functionality=PASS
+  FAIL [security] mode_policy:initial:private -> {'mode': '0755', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:initial:private/service-state.json -> {'mode': '0666', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:initial:exchange -> {'mode': '0777', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:initial:exchange/checkpoint.json -> {'mode': '0666', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:after_checkpoint:private -> {'mode': '0755', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:after_checkpoint:private/service-state.json -> {'mode': '0666', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:after_checkpoint:exchange -> {'mode': '0777', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:after_checkpoint:exchange/checkpoint.json -> {'mode': '0666', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  Written review: PENDING (required for full completion)
+Expected vulnerable: PASS
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 manage.py reset --yes
+usage: manage.py [-h] [--challenge {01,02,03}] [--yes] [--seed SEED]
+                 {reset,solution}
+manage.py: error: stop the local runner before resetting or installing a solution
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 manage.py solution --yes
+01-authorization: solution; previous files saved at reports/patch-backups/20261111T131448Z-7cca32/01-authorization
+02-exposure: solution; previous files saved at reports/patch-backups/20261111T131448Z-7cca32/02-exposure
+03-permissions: solution; previous files saved at reports/patch-backups/20261111T131448Z-7cca32/03-permissions
+Stop the local runner, then restart it to load code and reseed state:
+python3 run_lab.py
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 check.py --port-base 18100 --expect fixed --json /workspace/scratch/e7f6a34b7308/fix-the-system-ctf/evaluation/validation/native/reference.json
+Challenge 01: security=PASS functionality=PASS
+  FLAG{repair_01_ff3d821acc5b}
+  Written review: PENDING (required for full completion)
+Challenge 02: security=PASS functionality=PASS
+  FLAG{repair_02_a6491310bba2}
+  Written review: PENDING (required for full completion)
+Challenge 03: security=PASS functionality=PASS
+  FLAG{repair_03_cf9e17c97fa7}
+  Written review: PENDING (required for full completion)
+Expected fixed: PASS
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 manage.py reset --yes
+usage: manage.py [-h] [--challenge {01,02,03}] [--yes] [--seed SEED]
+                 {reset,solution}
+manage.py: error: stop the local runner before resetting or installing a solution
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 check.py --port-base 18100 --expect fixed --json /workspace/scratch/e7f6a34b7308/fix-the-system-ctf/evaluation/validation/native/restart.json
+Challenge 01: security=PASS functionality=PASS
+  FLAG{repair_01_ff3d821acc5b}
+  Written review: PENDING (required for full completion)
+Challenge 02: security=PASS functionality=PASS
+  FLAG{repair_02_a6491310bba2}
+  Written review: PENDING (required for full completion)
+Challenge 03: security=PASS functionality=PASS
+  FLAG{repair_03_cf9e17c97fa7}
+  Written review: PENDING (required for full completion)
+Expected fixed: PASS
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 manage.py reset --yes
+usage: manage.py [-h] [--challenge {01,02,03}] [--yes] [--seed SEED]
+                 {reset,solution}
+manage.py: error: stop the local runner before resetting or installing a solution
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 check.py --port-base 18100 --challenge 03 --json /workspace/scratch/e7f6a34b7308/fix-the-system-ctf/evaluation/validation/native/bad-read-only.json
+Challenge 03: security=PASS functionality=FAIL
+  FAIL [functionality] increment_and_reread -> 503
+  FAIL [functionality] checkpoint_created -> 200
+  FAIL [functionality] checker_restores_counter -> 503
+  Written review: PENDING (required for full completion)
+Expected fixed: FAIL
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 check.py --port-base 18100 --challenge 03 --json /workspace/scratch/e7f6a34b7308/fix-the-system-ctf/evaluation/validation/native/missing-state.json
+Challenge 03: security=FAIL functionality=FAIL
+  FAIL [functionality] service_reads_as_current_user -> 503
+  ERROR FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/e7f6a34b7308/fix-the-system-ctf/repair-native-e2e-b4q5uh9b/project/reports/live/state/private/service-state.json'
+  Written review: PENDING (required for full completion)
+Expected fixed: FAIL
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 manage.py reset --yes --seed 117
+01-authorization: reset; previous files saved at reports/patch-backups/20261111T131450Z-332658/01-authorization
+02-exposure: reset; previous files saved at reports/patch-backups/20261111T131450Z-332658/02-exposure
+03-permissions: reset; previous files saved at reports/patch-backups/20261111T131450Z-332658/03-permissions
+Stop the local runner, then restart it to load code and reseed state:
+python3 run_lab.py
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 check.py --port-base 18100 --expect vulnerable --json /workspace/scratch/e7f6a34b7308/fix-the-system-ctf/evaluation/validation/native/reset.json
+Challenge 01: security=FAIL functionality=PASS
+  FAIL [security] list_scope:alice -> 9
+  FAIL [security] read:alice:/api/invoices/477812618119889005 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/477812618119889005 -> 0
+  FAIL [security] read:alice:/api/receipts/r-6cc197e1b403e0e128eb159e -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-6cc197e1b403e0e128eb159e -> 0
+  FAIL [security] write:alice:477812618119889005 -> 200
+  FAIL [security] audit_write:alice:477812618119889005 -> 0
+  FAIL [security] read:alice:/api/invoices/1056302892402375252 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/1056302892402375252 -> 0
+  FAIL [security] read:alice:/api/receipts/r-f04e463b25d7f925b3a0b6b3 -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-f04e463b25d7f925b3a0b6b3 -> 0
+  FAIL [security] write:alice:1056302892402375252 -> 200
+  FAIL [security] audit_write:alice:1056302892402375252 -> 0
+  FAIL [security] read:alice:/api/invoices/1041786462397390019 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/1041786462397390019 -> 0
+  FAIL [security] read:alice:/api/receipts/r-058b260d9f14652b9f5e11e9 -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-058b260d9f14652b9f5e11e9 -> 0
+  FAIL [security] write:alice:1041786462397390019 -> 200
+  FAIL [security] audit_write:alice:1041786462397390019 -> 0
+  FAIL [security] read:alice:/api/invoices/471123193455923343 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/471123193455923343 -> 0
+  FAIL [security] read:alice:/api/receipts/r-4ee493a053d90e8342cd8b1c -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-4ee493a053d90e8342cd8b1c -> 0
+  FAIL [security] write:alice:471123193455923343 -> 200
+  FAIL [security] audit_write:alice:471123193455923343 -> 0
+  FAIL [security] read:alice:/api/invoices/329405648948197840 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/329405648948197840 -> 0
+  FAIL [security] read:alice:/api/receipts/r-975e1ba10b63a5c3e486d712 -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-975e1ba10b63a5c3e486d712 -> 0
+  FAIL [security] write:alice:329405648948197840 -> 200
+  FAIL [security] audit_write:alice:329405648948197840 -> 0
+  FAIL [security] read:alice:/api/invoices/854882477962235962 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/854882477962235962 -> 0
+  FAIL [security] read:alice:/api/receipts/r-24616b86e7da59c9eac1255d -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-24616b86e7da59c9eac1255d -> 0
+  FAIL [security] write:alice:854882477962235962 -> 200
+  FAIL [security] audit_write:alice:854882477962235962 -> 0
+  FAIL [security] read:alice:/api/invoices/509616348983580466 -> 200
+  FAIL [security] audit:read:alice:/api/invoices/509616348983580466 -> 0
+  FAIL [security] read:alice:/api/receipts/r-2c35def53b5f7a3ae2ee278e -> 200
+  FAIL [security] audit:read:alice:/api/receipts/r-2c35def53b5f7a3ae2ee278e -> 0
+  FAIL [security] write:alice:509616348983580466 -> 200
+  FAIL [security] audit_write:alice:509616348983580466 -> 0
+  FAIL [security] list_scope:bob -> 9
+  FAIL [security] read:bob:/api/invoices/1056302892402375252 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/1056302892402375252 -> 0
+  FAIL [security] read:bob:/api/receipts/r-f04e463b25d7f925b3a0b6b3 -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-f04e463b25d7f925b3a0b6b3 -> 0
+  FAIL [security] write:bob:1056302892402375252 -> 200
+  FAIL [security] audit_write:bob:1056302892402375252 -> 0
+  FAIL [security] read:bob:/api/invoices/147640875326392538 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/147640875326392538 -> 0
+  FAIL [security] read:bob:/api/receipts/r-29fdaac41128b6616f324bb4 -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-29fdaac41128b6616f324bb4 -> 0
+  FAIL [security] write:bob:147640875326392538 -> 200
+  FAIL [security] audit_write:bob:147640875326392538 -> 0
+  FAIL [security] read:bob:/api/invoices/471123193455923343 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/471123193455923343 -> 0
+  FAIL [security] read:bob:/api/receipts/r-4ee493a053d90e8342cd8b1c -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-4ee493a053d90e8342cd8b1c -> 0
+  FAIL [security] write:bob:471123193455923343 -> 200
+  FAIL [security] audit_write:bob:471123193455923343 -> 0
+  FAIL [security] read:bob:/api/invoices/329405648948197840 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/329405648948197840 -> 0
+  FAIL [security] read:bob:/api/receipts/r-975e1ba10b63a5c3e486d712 -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-975e1ba10b63a5c3e486d712 -> 0
+  FAIL [security] write:bob:329405648948197840 -> 200
+  FAIL [security] audit_write:bob:329405648948197840 -> 0
+  FAIL [security] read:bob:/api/invoices/607868773177190176 -> 200
+  FAIL [security] audit:read:bob:/api/invoices/607868773177190176 -> 0
+  FAIL [security] read:bob:/api/receipts/r-74f0b85a594c898554bea76c -> 200
+  FAIL [security] audit:read:bob:/api/receipts/r-74f0b85a594c898554bea76c -> 0
+  FAIL [security] write:bob:607868773177190176 -> 200
+  FAIL [security] audit_write:bob:607868773177190176 -> 0
+  FAIL [security] list_scope:casey -> 9
+  FAIL [security] read:casey:/api/invoices/477812618119889005 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/477812618119889005 -> 0
+  FAIL [security] read:casey:/api/receipts/r-6cc197e1b403e0e128eb159e -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-6cc197e1b403e0e128eb159e -> 0
+  FAIL [security] write:casey:477812618119889005 -> 200
+  FAIL [security] audit_write:casey:477812618119889005 -> 0
+  FAIL [security] read:casey:/api/invoices/1041786462397390019 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/1041786462397390019 -> 0
+  FAIL [security] read:casey:/api/receipts/r-058b260d9f14652b9f5e11e9 -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-058b260d9f14652b9f5e11e9 -> 0
+  FAIL [security] write:casey:1041786462397390019 -> 200
+  FAIL [security] audit_write:casey:1041786462397390019 -> 0
+  FAIL [security] read:casey:/api/invoices/147640875326392538 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/147640875326392538 -> 0
+  FAIL [security] read:casey:/api/receipts/r-29fdaac41128b6616f324bb4 -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-29fdaac41128b6616f324bb4 -> 0
+  FAIL [security] write:casey:147640875326392538 -> 200
+  FAIL [security] audit_write:casey:147640875326392538 -> 0
+  FAIL [security] read:casey:/api/invoices/854882477962235962 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/854882477962235962 -> 0
+  FAIL [security] read:casey:/api/receipts/r-24616b86e7da59c9eac1255d -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-24616b86e7da59c9eac1255d -> 0
+  FAIL [security] write:casey:854882477962235962 -> 200
+  FAIL [security] audit_write:casey:854882477962235962 -> 0
+  FAIL [security] read:casey:/api/invoices/509616348983580466 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/509616348983580466 -> 0
+  FAIL [security] read:casey:/api/receipts/r-2c35def53b5f7a3ae2ee278e -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-2c35def53b5f7a3ae2ee278e -> 0
+  FAIL [security] write:casey:509616348983580466 -> 200
+  FAIL [security] audit_write:casey:509616348983580466 -> 0
+  FAIL [security] read:casey:/api/invoices/607868773177190176 -> 200
+  FAIL [security] audit:read:casey:/api/invoices/607868773177190176 -> 0
+  FAIL [security] read:casey:/api/receipts/r-74f0b85a594c898554bea76c -> 200
+  FAIL [security] audit:read:casey:/api/receipts/r-74f0b85a594c898554bea76c -> 0
+  FAIL [security] write:casey:607868773177190176 -> 200
+  FAIL [security] audit_write:casey:607868773177190176 -> 0
+  FAIL [security] list_scope:manager -> 9
+  FAIL [security] read:manager:/api/invoices/477812618119889005 -> 200
+  FAIL [security] audit:read:manager:/api/invoices/477812618119889005 -> 0
+  FAIL [security] read:manager:/api/receipts/r-6cc197e1b403e0e128eb159e -> 200
+  FAIL [security] audit:read:manager:/api/receipts/r-6cc197e1b403e0e128eb159e -> 0
+  FAIL [security] write:manager:477812618119889005 -> 200
+  FAIL [security] audit_write:manager:477812618119889005 -> 0
+  FAIL [security] write:manager:1056302892402375252 -> 200
+  FAIL [security] audit_write:manager:1056302892402375252 -> 0
+  FAIL [security] read:manager:/api/invoices/1041786462397390019 -> 200
+  FAIL [security] audit:read:manager:/api/invoices/1041786462397390019 -> 0
+  FAIL [security] read:manager:/api/receipts/r-058b260d9f14652b9f5e11e9 -> 200
+  FAIL [security] audit:read:manager:/api/receipts/r-058b260d9f14652b9f5e11e9 -> 0
+  FAIL [security] write:manager:1041786462397390019 -> 200
+  FAIL [security] audit_write:manager:1041786462397390019 -> 0
+  FAIL [security] write:manager:147640875326392538 -> 200
+  FAIL [security] audit_write:manager:147640875326392538 -> 0
+  FAIL [security] write:manager:471123193455923343 -> 200
+  FAIL [security] audit_write:manager:471123193455923343 -> 0
+  FAIL [security] write:manager:329405648948197840 -> 200
+  FAIL [security] audit_write:manager:329405648948197840 -> 0
+  FAIL [security] read:manager:/api/invoices/854882477962235962 -> 200
+  FAIL [security] audit:read:manager:/api/invoices/854882477962235962 -> 0
+  FAIL [security] read:manager:/api/receipts/r-24616b86e7da59c9eac1255d -> 200
+  FAIL [security] audit:read:manager:/api/receipts/r-24616b86e7da59c9eac1255d -> 0
+  FAIL [security] write:manager:854882477962235962 -> 200
+  FAIL [security] audit_write:manager:854882477962235962 -> 0
+  FAIL [security] read:manager:/api/invoices/509616348983580466 -> 200
+  FAIL [security] audit:read:manager:/api/invoices/509616348983580466 -> 0
+  FAIL [security] read:manager:/api/receipts/r-2c35def53b5f7a3ae2ee278e -> 200
+  FAIL [security] audit:read:manager:/api/receipts/r-2c35def53b5f7a3ae2ee278e -> 0
+  FAIL [security] write:manager:509616348983580466 -> 200
+  FAIL [security] audit_write:manager:509616348983580466 -> 0
+  FAIL [security] write:manager:607868773177190176 -> 200
+  FAIL [security] audit_write:manager:607868773177190176 -> 0
+  FAIL [security] mass_assignment:alice:owner -> 200
+  FAIL [security] mass_assignment:alice:team -> 200
+  FAIL [security] mass_assignment:alice:amount -> 200
+  FAIL [security] mass_assignment:alice:id -> 200
+  FAIL [security] mass_assignment:alice:receipt -> 200
+  FAIL [security] mass_assignment:bob:owner -> 200
+  FAIL [security] mass_assignment:bob:team -> 200
+  FAIL [security] mass_assignment:bob:amount -> 200
+  FAIL [security] mass_assignment:bob:id -> 200
+  FAIL [security] mass_assignment:bob:receipt -> 200
+  FAIL [security] mass_assignment:casey:owner -> 200
+  FAIL [security] mass_assignment:casey:team -> 200
+  FAIL [security] mass_assignment:casey:amount -> 200
+  FAIL [security] mass_assignment:casey:id -> 200
+  FAIL [security] mass_assignment:casey:receipt -> 200
+  FAIL [security] mass_assignment:admin:owner -> 200
+  FAIL [security] mass_assignment:admin:team -> 200
+  FAIL [security] mass_assignment:admin:amount -> 200
+  FAIL [security] mass_assignment:admin:id -> 200
+  FAIL [security] mass_assignment:admin:receipt -> 200
+  FAIL [security] invalid_update -> 200
+  Written review: PENDING (required for full completion)
+Challenge 02: security=FAIL functionality=PASS
+  FAIL [security] not_served:private/runtime.json -> 200
+  FAIL [security] not_served:backups/runtime.json.bak -> 200
+  FAIL [security] not_served:%70rivate/runtime.json -> 200
+  FAIL [security] not_served:public/../private/runtime.json -> 200
+  FAIL [security] not_served:public/%2e%2e/backups/runtime.json.bak -> 200
+  FAIL [security] not_served:backups/runtime.json.bak?download=1 -> 200
+  FAIL [security] not_served:private%2fruntime.json -> 200
+  FAIL [security] not_served:public/../private//runtime.json -> 200
+  FAIL [security] key_rotated -> compared without recording key
+  FAIL [security] backup_removed -> on-disk artifact check
+  FAIL [security] compromised_key_removed_from_deployment -> ['backups/runtime.json.bak', 'private/runtime.json']
+  FAIL [security] old_key_revoked -> 200
+  FAIL [security] old_key_revoked -> 200
+  FAIL [security] old_key_revoked -> 200
+  Written review: PENDING (required for full completion)
+Challenge 03: security=FAIL functionality=PASS
+  FAIL [security] mode_policy:initial:private -> {'mode': '0755', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:initial:private/service-state.json -> {'mode': '0666', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:initial:exchange -> {'mode': '0777', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:initial:exchange/checkpoint.json -> {'mode': '0666', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:after_checkpoint:private -> {'mode': '0755', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:after_checkpoint:private/service-state.json -> {'mode': '0666', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:after_checkpoint:exchange -> {'mode': '0777', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  FAIL [security] mode_policy:after_checkpoint:exchange/checkpoint.json -> {'mode': '0666', 'owner_is_service': True, 'evidence_type': 'filesystem_metadata'}
+  Written review: PENDING (required for full completion)
+Expected vulnerable: PASS
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 manage.py reset --yes
+usage: manage.py [-h] [--challenge {01,02,03}] [--yes] [--seed SEED]
+                 {reset,solution}
+manage.py: error: stop the local runner before resetting or installing a solution
+

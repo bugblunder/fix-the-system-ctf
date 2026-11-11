@@ -1,0 +1,92 @@
+{
+  "actors": {
+    "alice": {
+      "id": "u-91b7584a2265b1f5",
+      "role": "user",
+      "team": "north",
+      "token": "uM37RUQwLmdFTiynV35mxex48NL8V7wy"
+    },
+    "bob": {
+      "id": "u-cd613e30d8f16adf",
+      "role": "user",
+      "team": "south",
+      "token": "VJMU6qP469SdIkS4HcpAs1s2CoTHN5MM"
+    },
+    "casey": {
+      "id": "u-1027c4d1c386bbc4",
+      "role": "user",
+      "team": "north",
+      "token": "MXZokouwOp4OJf1cImJkDiW7ID-CNOLH"
+    },
+    "manager": {
+      "id": "u-1e2feb89414c343c",
+      "role": "manager",
+      "team": "north",
+      "token": "VrmcI4z3lKkYUq0Zhh-dZwyx2QkfD3Bx"
+    },
+    "admin": {
+      "id": "u-c2ce6f447ed4d57b",
+      "role": "admin",
+      "team": "central",
+      "token": "irz_8NiEIvuVwQ7bmNwccVFhkWJbVQ8v"
+    }
+  },
+  "invoices": [
+    {
+      "id": "513496474603100760",
+      "owner": "u-91b7584a2265b1f5",
+      "team": "north",
+      "amount": 17554,
+      "receipt": "r-3a902931cd447e35b8b6d8fe",
+      "note": "Synthetic invoice f1fd42a29755d4c1"
+    },
+    {
+      "id": "963571565892496614",
+      "owner": "u-91b7584a2265b1f5",
+      "team": "north",
+      "amount": 25646,
+      "receipt": "r-c324c9859b810e766ec9d286",
+      "note": "Synthetic invoice 008a05a6c4647159"
+    },
+    {
+      "id": "255593089439283388",
+      "owner": "u-1027c4d1c386bbc4",
+      "team": "north",
+      "amount": 28797,
+      "receipt": "r-8d88348a7eed8d14f06d3fef",
+      "note": "Synthetic invoice 587fd2803bab6c39"
+    },
+    {
+      "id": "780353240361996767",
+      "owner": "u-1027c4d1c386bbc4",
+      "team": "north",
+      "amount": 14438,
+      "receipt": "r-f3c64af775a89294c2cd789a",
+      "note": "Synthetic invoice ed2f89d94a2f20aa"
+    },
+    {
+      "id": "1015993471593092170",
+      "owner": "u-cd613e30d8f16adf",
+      "team": "south",
+      "amount": 25082,
+      "receipt": "r-f8130c4237730edfafbd67f9",
+      "note": "Synthetic invoice b9d179e06c0fd4f5"
+    },
+    {
+      "id": "365971457039397689",
+      "owner": "u-cd613e30d8f16adf",
+      "team": "south",
+      "amount": 2104,
+      "receipt": "r-a648a7dd06839eb905b6e6e3",
+      "note": "Synthetic invoice 025b413f8a9a021e"
+    },
+    {
+      "id": "751235553565151329",
+      "owner": "u-91b7584a2265b1f5",
+      "team": "north",
+      "amount": 24978,
+      "receipt": "r-18072e8c35bf992dc9e9c616",
+      "note": "Synthetic invoice 0741c7a87ce42c82"
+    }
+  ]
+}
